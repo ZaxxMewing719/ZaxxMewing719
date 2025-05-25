@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MSM - Komunitas SA-MP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      background-color: #222;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+    }
+    .member-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .member {
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+      flex: 1 1 150px;
+      text-align: center;
+    }
+    .member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    .member-name {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manusia Suka Mewing</h1>
+    <p>Bergabunglah dengan komunitas kami dan jadilah bagian dari petualangan yang tak terlupakan!</p>
+  </header>
+  <nav>
+    <a href="https://chat.whatsapp.com/">WhatsApp</a>
+    <a href="https://www.instagram.com/">Instagram</a>
+    <a href="https://m.youtube.com/">YouTube</a>
+    <a href="https://mapping-shop-gta-samp.vercel.app/">Mapping Shop</a>
+  </nav>
+  <div class="container">
+    <h2>Anggota Komunitas</h2>
+    <div class="member-list" id="memberList">
+      <!-- Daftar anggota akan dimuat di sini -->
+    </div>
+  </div>
+
+  <script>
+    // Daftar anggota komunitas
+    const members = [
+      { name: 'ZaxxMewing', image: 'https://via.placeholder.com/80' },
+      { name: 'Irsan', image: 'https://via.placeholder.com/80' },
+      { name: 'Skay', image: 'https://via.placeholder.com/80' },
+      { name: 'Hamz', image: 'https://via.placeholder.com/80' },
+      { name: 'Rafa', image: 'https://via.placeholder.com/80' },
+      { name: 'SandiAja✅', image: 'https://via.placeholder.com/80' },
+      { name: 'Jacquel', image: 'https://via.placeholder.com/80' },
+      { name: 'Wilky', image: 'https://via.placeholder.com/80' },
+      { name: 'Cecep', image: 'https://via.placeholder.com/80' },
+      { name: 'RafaelW', image: 'https://via.placeholder.com/80' },
+      // Tambahkan anggota lainnya sesuai kebutuhan
+    ];
+
+    const memberList = document.getElementById('memberList');
+
+    members.forEach(member => {
+      const memberDiv = document.createElement('div');
+      memberDiv.classList.add('member');
+
+      const img = document.createElement('img');
+      img.src = member.image;
+      img.alt = member.name;
+
+      const name = document.createElement('div');
+      name.classList.add('member-name');
+      name.textContent = member.name;
+
+      memberDiv.appendChild(img);
+      memberDiv.appendChild(name);
+      memberList.appendChild(memberDiv);
+    });
+  </script>
+</body>
+</html>
